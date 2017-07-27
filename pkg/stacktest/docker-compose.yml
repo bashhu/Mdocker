@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: registry.cn-hangzhou.aliyuncs.com/forker/stacktest
+    build: .
+    ports:
+      - "8000:8000"
+    deploy:
+      replicas: 2
+  redis:
+    image: redis:alpine
+    deploy:
+      replicas: 2
+

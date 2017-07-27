@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    image: registry.cn-hangzhou.aliyuncs.com/forker/nginx:1.10.3
+    restart: always
+    container_name: web-node1
+    ports:
+      - "80:80"
+  php:
+    image: registry.cn-hangzhou.aliyuncs.com/forker/php:7.1.0
+    restart: always
+    container_name: php-node1
+    ports:
+      - "9000:9000"
